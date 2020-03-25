@@ -1,0 +1,50 @@
+version: '3.6'
+networks:
+  elk-network:
+    driver: bridge
+
+services:
+  elasticsearch:
+    container_name: elasticsearch
+    image: bitnami/elasticsearch:7
+    ports:
+      - 9200:9200
+      - 9300:9300
+    networks: 
+      - elk-network
+    volumes:
+      - elasticsearch_data:/bitnami
+
+  kibana:
+    container_name: kibana
+    image: bitnami/kibana:7
+    ports:
+      - 5600:5600
+      - 5601:5601
+    networks: 
+      - elk-network
+    volumes:
+      - kibana_data:/bitnami
+    depends_on:
+        - elasticsearch
+        - logstash
+
+  logstash:
+    container_name: logstash
+    image: bitnami/logstash:7
+    ports:
+      - 7070:8080
+    networks: 
+      - elk-network
+    volumes:
+      - logstash_data:/bitnami
+    depends_on:
+      - elasticsearch
+
+volumes:
+  elasticsearch_data:
+    driver: local
+  kibana_data:
+    driver: local
+  logstash_data:
+    driver: local    
