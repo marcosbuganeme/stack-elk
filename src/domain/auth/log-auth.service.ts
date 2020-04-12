@@ -1,5 +1,5 @@
 import { LogAuth } from "./log-auth.model"
-import ElasticSearchClient from "../../components/elasticsearch"
+import ElasticSearchClient from "../../infra/elasticsearch"
 
 class LogAuthService {
   async saveToIndex(data: LogAuth) {

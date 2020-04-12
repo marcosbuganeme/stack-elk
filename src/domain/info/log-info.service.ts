@@ -1,5 +1,5 @@
 import { LogInfo } from './log-info.model'
-import ElasticSearchClient from '../../components/elasticsearch'
+import ElasticSearchClient from '../../infra/elasticsearch'
 
 class LogInfoService {
   async saveToIndex(data: LogInfo) {

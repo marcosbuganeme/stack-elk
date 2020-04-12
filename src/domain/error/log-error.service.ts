@@ -1,5 +1,5 @@
 import { LogError } from "./log-error.model"
-import ElasticSearchClient from "../../components/elasticsearch"
+import ElasticSearchClient from "../../infra/elasticsearch"
 
 class LogErrorService {
   async saveToIndex(data: LogError) {

@@ -12,26 +12,16 @@
     }
   ],
   "scripts": {
-    "prebuild": "rimraf dist",
-    "build": "sucrase ./src -d ./dist --transforms typescript,imports",
     "dev": "nodemon src/use-example.ts",
     "prod": "pm2 start dist/use-example.js --name api-auth"
   },
   "private": false,
-  "os": [
-    "win32",
-    "darwin",
-    "linux"
-  ],
   "dependencies": {
     "@elastic/elasticsearch": "^7.6.1",
     "@types/node": "^13.9.5",
-    "dotenv": "^8.2.0",
-    "pm2": "^4.2.3",
-    "rimraf": "^3.0.1"
+    "dotenv": "^8.2.0"
   },
   "devDependencies": {
-    "@types/dotenv": "^8.2.0",
     "nodemon": "^2.0.2",
     "sucrase": "^3.12.1",
     "typescript": "^3.7.5"

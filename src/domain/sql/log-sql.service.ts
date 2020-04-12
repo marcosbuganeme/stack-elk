@@ -1,5 +1,5 @@
 import { LogSql } from "./log-sql.model"
-import ElasticSearchClient from "../../components/elasticsearch"
+import ElasticSearchClient from "../../infra/elasticsearch"
 
 class LogSqlService {
   async saveToIndex(data: LogSql) {
