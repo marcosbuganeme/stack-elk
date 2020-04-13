@@ -1,6 +1,6 @@
 {
   "name": "ab-library-stack-elk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "src/use-example.js",
   "author": "Marcos Olavo Silva Buganeme <marcos.after@gmail.com> (https://marcosbuganeme.com.br/)",
   "license": "MIT",
@@ -10,6 +10,15 @@
       "email": "marcos.after@gmail.com",
       "url": "https://marcosbuganeme.com.br"
     }
+  ],
+  "keywords": [
+    "Docker",
+    "Docker-compose",
+    "Redis",
+    "Bull",
+    "Elasticsearch",
+    "Beats",
+    "Kibana"
   ],
   "scripts": {
     "dev": "nodemon src/use-example.ts"
