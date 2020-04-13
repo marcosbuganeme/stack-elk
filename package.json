@@ -1,6 +1,6 @@
 {
   "name": "ab-library-stack-elk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "src/use-example.js",
   "author": "Marcos Olavo Silva Buganeme <marcos.after@gmail.com> (https://marcosbuganeme.com.br/)",
   "license": "MIT",
